@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #333;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.slide.current {
+  opacity: 1;
+}
+
+.slide .content {
+  position: absolute;
+  bottom: 70px;
+  left: -600px;
+  width: 600px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  padding: 20px;
+  opacity: 0;
+}
+
+.slide .content h1 {
+  margin-bottom: 10px;
+}
+
+button#next {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+}
+
+button#prev {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+}
+
+.buttons button {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  padding: 13px 15px;
+  border-radius: 50%;
+  outline: none;
+}
+
+.buttons button:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+.slide.current .content {
+  opacity: 1;
+  transform: translateX(600px);
+  transition: all 0.7s ease-in-out 0.3s;
+}
+
+@media (max-width: 500px) {
+  .slide .content {
+    bottom: -300px;
+    left: 0;
+    width: 400px;
+    padding: 5px;
+  }
+  .slide.current .content {
+    transform: translateY(-300px);
+  }
+}
+
+.slide:first-child {
+  background: url(./image/africa1.png) no-repeat center center/cover;
+}
+
+.slide:nth-child(2) {
+  background: url(./image/Algeria.jpeg) no-repeat center top/cover;
+}
+
+.slide:nth-child(3) {
+  background: url(./image/Lesotho.jpeg) no-repeat center top/cover;
+}
+
+.slide:nth-child(4) {
+  background: url(./image/lagos.jpeg) no-repeat center top/cover;
+}
+
+.slide:nth-child(5) {
+  background: url(./image/Ghana.jpeg) no-repeat center top/cover;
+}
+
+.slide:nth-child(6) {
+  background: url(./image/zambia.jpeg) no-repeat center top/cover;
+}
+
+.slide:nth-child(7) {
+  background: url(./image/Namibia.jpeg) no-repeat center top/cover;
+}
+
+.slide:nth-child(8) {
+  background: url(./image/Morocco.jpeg) no-repeat center top/cover;
+}
+
+.slide:nth-child(9) {
+  background: url(./image/mali.jpeg) no-repeat center top/cover;
+}
+
+.slide:nth-child(10) {
+  background: url(./image/Malawi.jpeg) no-repeat center top/cover;
+}
+
+.slide:nth-child(11) {
+  background: url(./image/Tanzania1.jpeg) no-repeat center top/cover;
+}
+
+.slide:nth-child(12) {
+  background: url(./image/Zimbabwe.jpeg) no-repeat center top/cover;
+}
+
+.slide:nth-child(13) {
+  background: url(./image/Mozambique1.jpeg) no-repeat center top/cover;
+}
+
+.slide:nth-child(14) {
+  background: url(./image/Kenya.jpeg) no-repeat center top/cover;
+}
+
+.slide:nth-child(15) {
+  background: url(./image/Cameroon.jpeg) no-repeat center center/cover;
+}
+
+.slide:nth-child(16) {
+  background: url(./image/Cape-Verde.jpeg) no-repeat center center/cover;
+}
+
+.slide:nth-child(17) {
+  background: url(./image/Ethiopia.jpeg) no-repeat center top/cover;
+}
+
+.slide:nth-child(18) {
+  background: url(./image/Equitoria-Guinea.jpeg) no-repeat center top/cover;
+}
